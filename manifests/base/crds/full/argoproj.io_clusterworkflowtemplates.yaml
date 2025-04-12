@@ -1986,9 +1986,6 @@ spec:
                       type: string
                     type: object
                 type: object
-              podPriority:
-                format: int32
-                type: integer
               podPriorityClassName:
                 type: string
               podSpecPatch:
@@ -2053,6 +2050,8 @@ spec:
                   runAsUser:
                     format: int64
                     type: integer
+                  seLinuxChangePolicy:
+                    type: string
                   seLinuxOptions:
                     properties:
                       level:
@@ -2614,6 +2613,10 @@ spec:
                             type: array
                             x-kubernetes-list-type: atomic
                         type: object
+                    type: object
+                  annotations:
+                    additionalProperties:
+                      type: string
                     type: object
                   archiveLocation:
                     properties:
@@ -8569,9 +8572,6 @@ spec:
                     x-kubernetes-preserve-unknown-fields: true
                   podSpecPatch:
                     type: string
-                  priority:
-                    format: int32
-                    type: integer
                   priorityClassName:
                     type: string
                   resource:
@@ -9901,6 +9901,8 @@ spec:
                       runAsUser:
                         format: int64
                         type: integer
+                      seLinuxChangePolicy:
+                        type: string
                       seLinuxOptions:
                         properties:
                           level:
@@ -13288,6 +13290,10 @@ spec:
                               type: array
                               x-kubernetes-list-type: atomic
                           type: object
+                      type: object
+                    annotations:
+                      additionalProperties:
+                        type: string
                       type: object
                     archiveLocation:
                       properties:
@@ -19243,9 +19249,6 @@ spec:
                       x-kubernetes-preserve-unknown-fields: true
                     podSpecPatch:
                       type: string
-                    priority:
-                      format: int32
-                      type: integer
                     priorityClassName:
                       type: string
                     resource:
@@ -20575,6 +20578,8 @@ spec:
                         runAsUser:
                           format: int64
                           type: integer
+                        seLinuxChangePolicy:
+                          type: string
                         seLinuxOptions:
                           properties:
                             level:
